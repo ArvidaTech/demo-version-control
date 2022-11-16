@@ -1,6 +1,6 @@
 # Exported from:        https://ip-172-31-39-126.eu-west-3.compute.internal:5516/
 # Release version:      22.2.0
-# Date created:         Tue Nov 15 14:19:12 UTC 2022
+# Date created:         Wed Nov 16 10:21:12 UTC 2022
 
 ---
 apiVersion: xl-release/v1
@@ -8,6 +8,11 @@ kind: Templates
 metadata:
   home: DemoVersionControl/HPROD
 spec:
+- template: Template hprod
+  scheduledStartDate: 2022-11-16T08:00:00Z
+  phases:
+  - phase: New Phase
+  riskProfile: Default risk profile
 - notifications:
   - notification: TASK_OVERDUE
     priority: High
